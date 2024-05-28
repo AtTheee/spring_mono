@@ -1,0 +1,79 @@
+#footer {
+    height: 300px;
+    /* background-color: #999; */
+}
+.footer__wrap {
+    position: relative;
+    /* width: 100%; */
+    display: flex;
+    overflow: hidden;
+    padding: 0 200px;
+    height: 100%;
+    background-color: rgb(122, 122, 122);
+    justify-content: space-between;
+    align-items: center;
+}
+.footer_info_container {
+    width: 100%;
+}
+.footer__text {
+    /* background-color: #fff; */
+    padding-bottom: 30px;
+}
+.footer__sns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer__logo {
+    /* background-color: #444; */
+    padding-bottom: 20px;
+}
+.footer__sns {
+    /* background-color: #fff; */
+}
+.footer__sns .sns__icons i {
+    padding-right: 5px;
+}
+.footer__logo img {
+    /* background-color: #fff; */
+    width: 100px;
+    /* align-self: flex-end; */
+}
+
+/*노트북 크기 정도*/
+@media (max-width: 1300px) {
+    #footer {
+        margin: 0 auto;
+        width: 98%;
+    }
+}
+
+@media (max-width: 990px) {
+    .footer__wrap {
+        padding: 0 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer__wrap {
+        padding: 0 30px;
+    }
+}
+
+/*모바일 크기 정도*/
+@media (max-width: 480px) {
+    #footer {
+        height: auto;
+    }
+    .footer__wrap {
+        flex-direction: column;
+        height: auto;
+    }
+    .footer_info_container {
+        padding: 30px 0;
+    }
+    .footer_sns_container {
+        padding: 30px 0;
+    }
+}

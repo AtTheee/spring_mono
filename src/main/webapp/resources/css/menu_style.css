@@ -1,0 +1,215 @@
+#nav {
+    position: fixed;
+    display: flex;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+    transition: background-color 1s;
+}
+#nav__container {
+    position: relative;
+    /* background-color: #444; */
+    display: flex;
+    margin: 0 auto;
+    width: 1200px;
+    justify-content: space-between; /* 로고와 메뉴 사이의 간격 최대화 */
+    align-items: center;
+}
+#nav__logo {
+    width: 10%;
+    height: 100%;
+    /* width: 100%; */
+    /* background-color: #fff; */
+    color: white;
+    transition: color 0.5s ease-in;
+}
+#nav__logo a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+#nav__logo a img {
+    /* background-color: #fff; */
+    /* width: 100%; */
+    /* filter: invert(1); */
+}
+#nav__menu {
+}
+#nav__menu ul {
+    /* background-color: #999; */
+}
+#nav__menu > ul > li {
+    padding: 0 20px;
+    /* background-color: #5f3131; */
+    position: relative;
+    display: inline-block;
+    height: 100px;
+}
+#nav__menu > ul > li > a {
+    /* background-color: #fff; */
+    line-height: 100px;
+    text-align: center;
+    font-size: 17px;
+    margin: 0 20px;
+    color: black;
+    transition: color 0.5s ease-in;
+}
+#nav__menu ul li a:last-child {
+    margin-right: 0;
+}
+#nav__menu ul li a:hover {
+    font-weight: bold;
+}
+
+#nav__menu .sub_menu {
+    display: none;
+}
+
+#nav__menu .sub_menu ul {
+    margin-top: 10px;
+    /* display: block; */
+    position: absolute;
+    top: 90%;
+    right: 50%;
+    transform: translateX(50%);
+    background-color: rgba(73, 73, 73, 0.795);
+}
+#nav__menu .sub_menu ul li {
+    padding: 20px;
+    font-size: 1.1rem;
+    display: block;
+    width: 100%;
+}
+
+#nav__menu .sub_menu ul li a {
+    color: white;
+}
+
+#nav__menu ul > li.logged_in:hover .sub_menu {
+    display: block;
+}
+
+#nav .nav__toggleBtn {
+    color: black;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin: 0 25px;
+    display: none;
+    transition: color 0.5s ease-in;
+}
+#nav .nav__toggleNav {
+    position: absolute;
+    top: 0;
+    right: -300px;
+    width: 10px;
+    /* height: 100vh; */
+    background-color: rgba(255, 255, 255, 0.1);
+}
+/* 스크롤 시 변경될 스타일 */
+#nav.nav__scrolled {
+    background-color: rgba(255, 255, 255, 1);
+}
+.nav__scrolled #nav__logo,
+.nav__scrolled #nav__menu > ul > li > a,
+#nav.nav__scrolled .nav__toggleBtn {
+    color: black;
+}
+
+@media (max-width: 1300px) {
+    #nav__container {
+        padding: 0 30px;
+        width: 98%;
+    }
+}
+@media (max-width: 768px) {
+    #nav .nav__toggleBtn {
+        transition: all 0.6s ease; /* 부드러운 애니메이션 */
+        display: block;
+    }
+    #nav .nav__toggleBtn.on {
+        right: 250px;
+    }
+    #nav #nav__menu {
+        overflow-y: auto;
+        position: fixed;
+        right: -250px;
+        top: 0;
+        width: 250px; /* 원하는 너비 */
+        height: 100vh; /* 전체 높이 */
+        background: rgb(255, 255, 255); /* 배경색 */
+        z-index: 1000; /* 상위 레이어 */
+        transition: all 0.6s ease; /* 부드러운 애니메이션 */
+        border-radius: 0% 0% 100% 50%;
+    }
+    #nav #nav__menu.show {
+        right: 0;
+        border-radius: 0% 0% 0% 0%;
+        background: rgb(255, 255, 255);
+    }
+    #nav__menu > ul {
+        padding: 10px;
+        /* background-color: #40e04e; */
+    }
+    #nav__menu > ul > li {
+        padding: 0;
+        width: 100%;
+        height: auto;
+        /* background-color: #5e45e9; */
+    }
+    #nav__menu > ul > li > a {
+        margin: 0;
+        /* background-color: #cc2323; */
+        display: block;
+        /* font-size: 400; */
+        /* margin: 45px 20px; */
+        color: black;
+        transition: color 0.5s ease-in;
+    }
+
+    #nav__menu ul li a i {
+        color: aqua;
+        display: none;
+    }
+
+    #nav__menu .sub_menu.show{
+        display: block;
+    }
+
+    /*#nav__menu .sub_menu {*/
+    /*    display: block;*/
+    /*}*/
+
+    #nav__menu .sub_menu ul {
+        background-color: #ffffff00;
+        margin-top: 0;
+        display: flex;
+        position: relative;
+        top: 0;
+    }
+    #nav__menu .sub_menu ul li {
+        display: block;
+        width: 50%;
+
+        padding: 0;
+    }
+    #nav__menu .sub_menu ul li a {
+        border-top: 1px solid rgba(128, 128, 128, 0.116);
+        width: 100%;
+        text-align: center;
+        /* background-color: #be3636; */
+        line-height: 50px;
+        color: black;
+        display: inline-block;
+    }
+}
+
+@media (max-width: 480px) {
+    #nav .nav__toggleBtn {
+        font-size: 10px;
+        line-height: 1.5em;
+    }
+}

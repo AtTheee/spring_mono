@@ -1,0 +1,206 @@
+header img {
+    width: 100%;
+    height: 200px;
+}
+
+.loginForm_wrap {
+    padding: 100px 0;
+    /* height: 1000px; */
+    width: 100%;
+    /* background-color: #dbaaaa; */
+}
+
+.loginForm_container {
+    text-align: center;
+    margin: 0 auto;
+    width: 800px;
+    height: 100%;
+    background-color: #ffffff73;
+}
+
+.loginForm_container h3 {
+    font-size: 1.5rem;
+    padding: 30px;
+    background-color: #fff;
+    border-bottom: 2px solid black;
+}
+.agree_wrap {
+    line-height: 1.5;
+    /* background-color: #a39f9f; */
+    /* padding-bottom: 30px; */
+    padding-top: 30px;
+}
+
+h4 {
+    text-align: start;
+    padding: 20px 0;
+}
+h4::before {
+    content: "";
+    margin: 0 10px;
+    display: inline-block;
+    width: 3px;
+    height: 17px;
+    background-color: gray;
+}
+.agree_box {
+    overflow-y: scroll;
+    text-align: left;
+    padding: 30px;
+    width: 100%;
+    height: 250px;
+    background-color: #fff;
+    border: 1px solid gray;
+}
+.agree_box h5 {
+    padding-top: 10px;
+}
+.agree_box p {
+    padding-top: 10px;
+    font-size: 0.8rem;
+}
+.agree_checkBox {
+    padding: 10px 30px;
+    text-align: right;
+    background-color: #fff;
+}
+
+.infoList_container {
+    padding-top: 50px;
+    width: 100%;
+    /* height: 1500px; */
+    /* background-color: #c5c5c5; */
+}
+
+.infoList_box {
+    width: 100%;
+    padding: 30px 10px;
+    background-color: #fff;
+}
+
+.infoList_box table {
+    width: 100%;
+    text-align: left;
+    font-size: 1.2rem;
+    /* background-color: #c7c7c7; */
+}
+
+.infoList_box table tr {
+    height: 50px;
+    background-color: #fff;
+}
+
+td:first-child {
+    width: 30%;
+}
+
+.infoList_box table th{
+    width: 20%;
+}
+
+.infoList_box table td {
+    border-bottom: 1px solid gray;
+    /* width: 50px; */
+    /* background-color: #754e4e; */
+    padding: 20px 0;
+}
+
+.widht200 {
+    width: 200px;
+    height: 30px;
+}
+
+#id_checkBtn {
+    width: 100px;
+    height: 30px;
+}
+
+.width50 {
+    width: 100px;
+    height: 30px;
+}
+
+.loginForm_button {
+    padding: 30px 30px;
+    text-align: right;
+    background-color: #fff;
+}
+.loginForm_button button {
+    cursor: pointer;
+    color: white;
+    border-radius: 8px;
+    width: 300px;
+    height: 50px;
+    background-color: rgb(53, 53, 53);
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: auto;
+    color: #666666;
+}
+
+#pw_msg,
+#pw_check_msg,
+#ph_msg,
+#id_msg,#em_msg{
+    font-size: 0.8rem;
+    color: red;
+}
+
+.required {
+    color: red;
+}
+.emailBtn {
+    border-style: none;
+    background-color: #c5c5c5;
+    padding: 0 10px;
+    width: auto;
+}
+
+.hidden{
+    display: none;
+}
+.inline{
+    display: inline;
+}
+
+
+@media (max-width: 970px) {
+    .loginForm_container {
+        width: 90%;
+    }
+    .widht200 {
+        width: 99%;
+    }
+    .w70 {
+        width: 67%;
+    }
+    #id_checkBtn {
+        width: 30.5%;
+    }
+    .emailBtn {
+        margin-top: 10px;
+        width: 99%;
+    }
+    #email{
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .loginForm_button button {
+        width: 45%;
+    }
+
+    .infoList_box table th {
+        font-size: 1rem;
+        word-break: keep-all;
+    }
+}
+
+@media (max-width: 480px) {
+    .infoList_box table {
+        font-size: 1.1rem;
+    }
+}

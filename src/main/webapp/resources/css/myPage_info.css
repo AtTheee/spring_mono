@@ -1,0 +1,136 @@
+header img {
+    width: 100%;
+    height: 200px;
+}
+
+main {
+    /* background-color: #e74747; */
+    /* height: 1000px; */
+}
+.info_wrap {
+    padding: 100px 0;
+    text-align: center;
+    width: 800px;
+    height: 100%;
+    margin: 0 auto;
+    /* background-color: #4bc093; */
+}
+
+.infoList_box {
+    border-top: 2px solid black;
+    width: 100%;
+    margin-top: 50px;
+    /* background-color: #013fb1; */
+}
+
+.infoList_box > table {
+    margin-top: 30px;
+    width: 100%;
+    /* background-color: #cc3636; */
+}
+
+.infoList_box table tr {
+    /* background-color: #f8a1a1; */
+    border-bottom: 1px solid rgba(128, 128, 128, 0.267);
+}
+
+.infoList_box table tr > th {
+    /* background-color: #792727; */
+    text-align: left;
+    width: 20%;
+    padding: 30px 0;
+    word-break: keep-all;
+    /* height: 40px; */
+}
+
+.infoList_box table tr > td {
+    text-align: left;
+    /* background-color: #dbe462a4; */
+}
+
+.infoList_box table tr > td > input {
+    border: 1px solid rgba(128, 128, 128, 0.267);
+    height: 30px;
+    width: 50%;
+}
+
+.infoList_box table tr > td > input:read-only {
+    background-color: #fff;
+    border-style: none;
+}
+
+.mypage_btnBox {
+    display: flex;
+    justify-content: end;
+    padding: 30px 0;
+    text-align: right;
+    background-color: #fff;
+}
+.mypage_btnBox #submitBtn {
+    cursor: pointer;
+    margin-right: 30px;
+    color: white;
+    border-radius: 8px;
+    background-color: rgb(53, 53, 53);
+    width: 200px;
+    height: 50px;
+}
+
+.mypage_btnBox .backBtn {
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+    align-content: center;
+    border-radius: 8px;
+    width: 100px;
+    height: 50px;
+    border: 1px solid rgb(53, 53, 53);
+}
+.btnBox2 > * {
+    margin-right: 10px;
+    font-size: 0.8rem;
+}
+.btnBox2 {
+    padding-top: 10px;
+}
+
+.mypage_btnBox > #removeBtn{
+    height: auto;
+    width: auto;
+    cursor: pointer;
+    text-decoration-line: underline;
+    border-style: none;
+    background-color: #fff;
+}
+
+#pw_msg, #pw_check_msg, #ph_msg{
+    font-size: 0.9rem;
+    color: red;
+}
+
+.required {
+    color: red;
+}
+
+@media (max-width: 960px) {
+    .info_wrap {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .info_wrap {
+        width: 90%;
+    }
+    .infoList_box table tr > td > input {
+        width: 100%;
+    }
+    .mypage_btnBox button {
+        margin-right: 10px;
+        width: 30%;
+    }
+
+    .mypage_btnBox .backBtn {
+        width: 20%;
+    }
+}

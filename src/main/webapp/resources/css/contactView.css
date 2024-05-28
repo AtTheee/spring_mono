@@ -1,0 +1,252 @@
+header img {
+    width: 100%;
+    height: 200px;
+}
+
+.contact_board_wrap {
+    /* background-color: #9b5f5f; */
+    padding-bottom: 50px;
+    margin: 0 auto;
+    width: 1200px;
+    /* height: 1000px; */
+}
+
+.contact_board_wrap h2 {
+    margin-top: 100px;
+    background-color: #ffffff50;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.contact_input_wrap {
+    /* background-color: #a04343; */
+    padding: 30px;
+    /* min-height: 800px; */
+    /* height: 100%; */
+}
+
+.input_list {
+    margin-top: 30px;
+    /* height: 50px; */
+    display: flex;
+    /* background-color: #fff; */
+}
+.contents {
+    /* background-color: #862f2f; */
+    height: auto;
+}
+.list_L {
+    width: 50%;
+    /* background-color: #3cbe88; */
+}
+.list_R {
+    width: 50%;
+    display: flex;
+    /* background-color: #3c54be; */
+}
+
+.input_list_item {
+    width: 100%;
+    height: 100%;
+    /* background-color: #60a860; */
+    /* width: 100%; */
+    padding-right: 10px;
+}
+
+.input_list_item table {
+    width: 100%;
+    height: 100%;
+}
+
+.input_list_item table tr {
+    height: 50px;
+    border: 1px solid rgba(128, 128, 128, 0.171);
+}
+
+.input_list_item table th {
+    width: 130px;
+    background-color: #c5c5c579;
+    /*padding-right: 20px;*/
+}
+
+.input_list:first-child input,
+.input_list:first-child select {
+    padding: 0 10px;
+    border: none;
+    height: 100%;
+    width: 100%;
+}
+
+label {
+    font-size: 0.8rem;
+    margin-right: 20px;
+}
+
+label > input {
+    margin-right: 5px;
+}
+
+.radio_td {
+    padding-left: 10px;
+    /* background-color: #531b1b; */
+}
+option {
+    /* height: 30px; */
+    color: gray;
+}
+
+textarea {
+    /* padding-top: 10px; */
+    border-color: rgba(128, 128, 128, 0.171);
+    width: 100%;
+    height: 500px;
+}
+
+.contact_board_button {
+    background-color: #8d4b4b;
+}
+
+.contact_board_button {
+    padding: 20px 40px;
+    text-align: right;
+    background-color: #fff;
+}
+
+.contact_comment_wrap {
+    margin-top: 50px;
+    border-top: 1px solid gray;
+    padding: 30px;
+    /* height: 300px; */
+    width: 100%;
+    background-color: #d4d4d41a;
+}
+
+.commentBox {
+    display: flex;
+    /* background-color: #fff; */
+}
+
+.commentBox > * {
+    height: 50px;
+}
+
+.commentBox > textarea {
+    margin-right: 20px;
+    width: 70%;
+}
+
+.commentBox > button {
+    width: 25%;
+}
+
+.comment_list {
+    padding: 20px 5px;
+    /* height: 100px; */
+    /* background-color: #c2c2c2; */
+    border-bottom: 1px dotted gray;
+}
+
+.comment_list:first-child{
+    margin-top: 50px;
+}
+.comment_list > span {
+    display: inline-block;
+}
+
+.comment_list > button {
+    position: relative;
+    width: auto;
+    background-color: transparent;
+    border-style: none;
+    margin-left: 5px;
+}
+.comment_list > button:nth-of-type(1) {
+    margin-left: 10px;
+}
+
+.comment_list > button::after {
+    content: "";
+    width: 1px;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -5px;
+    background-color: #afafaf;
+}
+
+.comment_list > button:nth-last-of-type(1)::after {
+    display: none;
+}
+
+.comment_list > .name {
+    font-weight: bold;
+}
+
+.comment_list > textarea {
+    overflow-y: hidden;
+    width: 100%;
+    display: block;
+    margin: 10px 0;
+    font-size: 1.1rem;
+    height: auto;
+}
+
+.comment_list > textarea:read-only {
+    background-color: transparent;
+    border-style: none;
+    pointer-events: none;
+}
+
+.comment_list > .date {
+    font-size: 0.8rem;
+}
+.reply_link {
+    font-size: 0.9rem;
+}
+
+
+.reCommentBox {
+    margin-top: 30px;
+    padding: 0 20px;
+}
+
+.reComment_list {
+    margin-top: 0;
+}
+
+.reComment_list > p {
+    margin-left: 20px;
+}
+
+@media (max-width: 1240px) {
+    .contact_board_wrap {
+        width: 98%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .input_list:first-child {
+        flex-direction: column;
+    }
+    .list_L {
+        width: 100%;
+    }
+    .list_R {
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    label {
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .list_R {
+        flex-direction: column;
+    }
+    .list_R .input_list_item:first-child {
+        margin-bottom: 30px;
+    }
+}

@@ -1,0 +1,67 @@
+header img {
+    width: 100%;
+    height: 200px;
+}
+
+.find_wrap {
+    padding: 100px 0;
+    /* background-color: #df3a3a; */
+}
+
+.find_container {
+    text-align: center;
+    margin: 0 auto;
+    width: 600px;
+    /* background-color: #ffffff73; */
+}
+
+.find_container h3 {
+    font-size: 1.5rem;
+    padding: 30px;
+    background-color: #fff;
+    border-bottom: 2px solid black;
+}
+
+.find_inputBox {
+    padding: 20px 0;
+    /* background-color: #e2eccb; */
+}
+
+.find_inputBox > table {
+    margin-top: 30px;
+    /* background-color: #a75050; */
+    width: 100%;
+    border-spacing: 10px;
+    border-collapse: separate;
+    text-align: left;
+}
+
+.find_inputBox input {
+    /* border-style: none; */
+    /* border-color: white; */
+    height: 40px;
+    width: 100%;
+}
+
+#check_msg {
+    text-align: right;
+    display: block;
+    margin-top: 10px;
+    background-color: #fff;
+    color: red;
+}
+
+.find_btnBox {
+    margin-top: 30px;
+}
+
+.btn,
+.sub_btn {
+    border-radius: 0;
+}
+
+@media (max-width: 768px) {
+    .find_container {
+        width: 80%;
+    }
+}

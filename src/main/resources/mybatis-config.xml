@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+        <typeAlias alias="BoardDto" type="com.fastcampus.ch4.domain.BoardDto"/>
+        <typeAlias alias="CommentDto" type="com.fastcampus.ch4.domain.CommentDto"/>
+        <typeAlias alias="ContactDto" type="com.fastcampus.ch4.domain.ContactDto"/>
+        <typeAlias alias="GalleryDto" type="com.fastcampus.ch4.domain.GalleryDto"/>
+        <typeAlias alias="ImgFileDto" type="com.fastcampus.ch4.domain.ImgFileDto"/>
+        <typeAlias alias="SearchCondition" type="com.fastcampus.ch4.domain.SearchCondition"/>
+    </typeAliases>
+</configuration>

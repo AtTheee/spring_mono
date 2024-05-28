@@ -1,0 +1,144 @@
+header img {
+    width: 100%;
+    height: 200px;
+}
+
+main {
+    /* height: 1500px; */
+}
+
+.project_list_wrap {
+    margin: 0 auto;
+    width: 1200px;
+    /* height: 100%; */
+    /* background-color: #e4b3b32f; */
+}
+
+.project_text_container {
+    margin-top: 100px;
+    padding: 50px 0;
+    /* background-color: #d15656; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circle {
+    background-color: #a6d0f3;
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    margin-top: 5px;
+    margin-right: 10px;
+    display: block;
+}
+.subtitle {
+    /* background-color: #fff; */
+    display: flex;
+}
+
+.project_nav {
+    margin: 30px 0;
+    /* padding: 30px 0; */
+    background-color: #c5c5c52d;
+    /* height: 300px; */
+}
+
+.project_nav ul {
+    padding-left: 20px;
+}
+
+.project_nav ul li {
+    display: inline-block;
+}
+
+.project_nav ul li a {
+    color: rgb(138, 138, 138);
+    display: block;
+    padding: 20px 20px;
+    /* background-color: #fff; */
+}
+
+.project_nav ul li a:hover {
+    font-weight: lighter;
+}
+
+.project_nav ul li .nav_active {
+    color: black;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+}
+
+.project_list_container {
+    /* height: 100%; */
+    /* background-color: #8fd6d6d7; */
+}
+
+.project_list_container ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project_list_container ul li {
+    padding: 10px;
+    width: calc(100% / 3);
+    height: 300px;
+}
+.project_list_container ul li a{
+    position: relative;
+}
+.project_list_container ul li img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.imgHover {
+    word-wrap: break-word;
+    opacity: 0;
+    text-align: center;
+    align-content: center;
+    background-color: #30303069;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    pointer-events: none; /* 추가: 텍스트 위로 마우스 이벤트가 전달되지 않도록 */
+}
+
+.project_list_container ul li:hover .imgHover {
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.paging_container .paging_active {
+    background-color: #6d6d6d;
+    color: white;
+}
+
+.project_write_button {
+    text-align: right;
+    background-color: #fff;
+}
+
+@media (max-width: 1240px) {
+    .project_list_wrap {
+        width: 95%;
+    }
+}
+
+@media (max-width: 990px) {
+    .project_list_container ul li {
+        width: calc(100% / 2);
+    }
+}
+
+@media (max-width: 480px) {
+    .project_list_container ul li {
+        width: 100%;
+    }
+}
