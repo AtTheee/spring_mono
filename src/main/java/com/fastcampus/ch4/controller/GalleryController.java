@@ -111,7 +111,7 @@ public class GalleryController {
     }
 
     @GetMapping("read")
-    public String read(SearchCondition sc, Integer gno, Model model) throws Exception {
+    public String read(SearchCondition sc, Integer gno, Model model, HttpSession session) throws Exception {
 
         try{
 
@@ -123,6 +123,14 @@ public class GalleryController {
             model.addAttribute("imgList", imgList);
 
             model.addAttribute("rootPath", rootPath);
+
+            String id = session.getAttribute("id").toString();
+            if(id != null){
+                User user = memberService.getUser(id);
+                model.addAttribute("role", user.getRoles());
+            } else{
+                model.addAttribute("role", "GUEST");
+            }
 
         } catch (Exception e){
             e.printStackTrace();

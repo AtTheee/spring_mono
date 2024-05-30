@@ -93,8 +93,10 @@
       </div>
     </div>
     <div class="btn_container gallery_view_btn">
-      <button type="button" class="btn" id="modifyBtn">수정하기</button>
-      <button type="button" class="sub_btn" id="deleteBtn">삭제</button>
+      <c:if test="${role == 'MANAGER'}">
+        <button type="button" class="btn" id="modifyBtn">수정하기</button>
+        <button type="button" class="sub_btn" id="deleteBtn">삭제</button>
+      </c:if>
       <button type="button" class="sub_btn" id="listBtn">목록</button>
     </div>
   </div>

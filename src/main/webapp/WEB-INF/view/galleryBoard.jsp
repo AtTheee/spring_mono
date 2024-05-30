@@ -180,9 +180,6 @@
           // 삭제 링크
           const deleteLink = $("<a>").addClass("delete_link").text("X");
 
-          // 삭제 링크 클릭 이벤트 핸들러
-          // deleteLink.on('click', deleteLinkClick);
-
           // div에 이미지와 삭제 링크
           imgContainer.append(imgHtml).append(deleteLink)
 
@@ -190,7 +187,7 @@
           $(".preview_container").append(imgContainer)
 
           dataTransfer.items.add(file);
-          console.log(dataTransfer)
+          // console.log(dataTransfer)
         }
         reader.readAsDataURL(file) // 이미지 파일 읽기
       })
@@ -213,12 +210,11 @@
       }
 
       // DOM 요소는 오리지널 js로 접근 가능
-      // const fileInput = document.getElementById('file_upload');
       const fileInput =$("#file_upload")[0]; // Jquery 객체를 DOM 요소로 변환
       fileInput.files = dataTransfer.files;
 
       // 폼을 다시 제출 (파일 리스트가 설정된 후)
-      console.log(fileInput.files)
+      // console.log(fileInput.files)
       form.attr("action","<c:url value="/gallery/write"/>");
       form.attr("method","post");
       form.submit();
