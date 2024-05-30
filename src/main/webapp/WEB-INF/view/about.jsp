@@ -474,7 +474,7 @@
                 end: "=" + historyImgHeight,
                 // end: "300% 60%",
                 pin: true,
-                markers: true,
+                // markers: true,
             })
         },
     })

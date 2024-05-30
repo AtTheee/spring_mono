@@ -236,7 +236,7 @@
                 trigger: triggerElement,
                 start: "top center",
                 toggleActions: "play none none reverse",
-                markers: true,
+                // markers: true,
             })
         }
 
