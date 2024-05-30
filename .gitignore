@@ -163,5 +163,5 @@ buildNumber.properties
 
 root-context.xml
 
-src/webapp/WEB-INF/views/
+src/main/webapp/WEB-INF/views/
 .idea/
