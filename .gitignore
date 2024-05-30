@@ -162,3 +162,6 @@ buildNumber.properties
 # End of https://www.toptal.com/developers/gitignore/api/intellij,java,maven
 
 root-context.xml
+
+src/webapp/WEB-INF/views/
+.idea/
