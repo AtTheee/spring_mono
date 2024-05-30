@@ -26,7 +26,7 @@ public class CommentController {
     @PatchMapping("/comments/{cno}")
     public ResponseEntity<String> modify(@PathVariable Integer cno, @RequestBody CommentDto commentDto, HttpSession session) {
                 String commenter = (String) session.getAttribute("id");
-//        String commenter = "asdf";
+
         commentDto.setCommenter(commenter);
         commentDto.setCno(cno);
         System.out.println("dto = " + commentDto);
