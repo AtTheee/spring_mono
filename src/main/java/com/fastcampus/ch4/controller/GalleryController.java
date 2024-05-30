@@ -1,11 +1,9 @@
 package com.fastcampus.ch4.controller;
 
 
-import com.fastcampus.ch4.domain.GalleryDto;
-import com.fastcampus.ch4.domain.ImgFileDto;
-import com.fastcampus.ch4.domain.PageHandler;
-import com.fastcampus.ch4.domain.SearchCondition;
+import com.fastcampus.ch4.domain.*;
 import com.fastcampus.ch4.service.GalleryService;
+import com.fastcampus.ch4.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -14,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -27,10 +26,13 @@ public class GalleryController {
     @Autowired
     GalleryService galleryService;
 
+    @Autowired
+    MemberService memberService;
+
     private String rootPath = "/images";
 
     @GetMapping("/list")
-    public String list(SearchCondition sc, Model model) throws Exception{
+    public String list(SearchCondition sc, Model model, HttpSession session) throws Exception{
         try{
 //            System.out.println(sc);
             // 프로젝트 게시판 리스트에서는 각 게시글 별 이미지가 하나씩 필요하니께.
@@ -47,6 +49,14 @@ public class GalleryController {
 
             PageHandler pageHandler = new PageHandler(totalCnt, sc);
             model.addAttribute("ph",pageHandler);
+
+            String id = session.getAttribute("id").toString();
+            if(id != null){
+                User user = memberService.getUser(id);
+                model.addAttribute("role", user.getRoles());
+            } else{
+                model.addAttribute("role", "GUEST");
+            }
 
         } catch (Exception e){
             e.printStackTrace();

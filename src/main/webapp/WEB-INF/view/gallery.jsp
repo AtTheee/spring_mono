@@ -44,7 +44,9 @@
             </div>
         </div>
         <div class="project_write_button">
-            <a href="${path}/gallery/write">글쓰기</a>
+            <c:if test="${role == 'MANAGER'}">
+                <a href="${path}/gallery/write">글쓰기</a>
+            </c:if>
         </div>
         <div class="project_nav">
             <ul>
