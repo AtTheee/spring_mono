@@ -50,8 +50,8 @@ public class GalleryController {
             PageHandler pageHandler = new PageHandler(totalCnt, sc);
             model.addAttribute("ph",pageHandler);
 
-            String id = session.getAttribute("id").toString();
-            if(id != null){
+            String id = (String) session.getAttribute("id");
+            if(id != null && !id.isEmpty()){
                 User user = memberService.getUser(id);
                 model.addAttribute("role", user.getRoles());
             } else{

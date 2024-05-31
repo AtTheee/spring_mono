@@ -37,6 +37,19 @@ main {
     display: flex;
 }
 
+.contact_top_container {
+    position: relative;
+    /* background-color: #d43030; */
+}
+.search_result_text_container {
+    position: absolute;
+    /* text-align: center; */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: #27d617; */
+}
+
 .contact_writeBtn {
     padding: 20px 0;
     text-align: right;
@@ -95,6 +108,38 @@ table .date_td {
     width: 15%;
 }
 
+.paging_container{
+    padding-bottom: 60px;
+}
+
+.search_container {
+    text-align: center;
+    /* background-color: #752222; */
+    /* height: 400px; */
+    padding-bottom: 100px;
+
+}
+
+.search_option {
+    width: 100px;
+    height: 40px;
+}
+.search_input {
+    width: 300px;
+    height: 40px;
+}
+.search_button {
+    cursor: pointer;
+    background-color: white;
+    border: solid 1px grey;
+    width: 70px;
+    height: 40px;
+}
+
+.hidden{
+    display: none;
+}
+
 @media (max-width: 1240px) {
     .contact_wrap {
         width: 95%;
@@ -114,5 +159,17 @@ table .date_td {
     }
     table .date_td {
         width: 20%;
+    }
+    .contact_writeBtn button {
+        width: 20%;
+    }
+    .search_option {
+        width: 20%;
+    }
+    .search_input {
+        width: 50%;
+    }
+    .search_button {
+        width: 15%;
     }
 }

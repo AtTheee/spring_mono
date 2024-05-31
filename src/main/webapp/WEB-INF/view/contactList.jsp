@@ -45,8 +45,13 @@
                 <h2><br />${mode eq 'myBoard' ? "내 게시물" : "문의하기"}</h2>
             </div>
         </div>
-        <div class="contact_writeBtn">
-            <button onclick="location.href='<c:url value="/contact/write"/>'">문의하기</button>
+        <div class="contact_top_container">
+            <div class="search_result_text_container hidden">
+                <p></p>
+            </div>
+            <div class="contact_writeBtn">
+                <button onclick="location.href='<c:url value="/contact/write"/>'">문의하기</button>
+            </div>
         </div>
         <div class="contact_list_container">
             <table>
@@ -94,6 +99,18 @@
             <%--            <a href="" class="page paging_active">1</a>--%>
             <%--            <a href="" class="page">2</a>--%>
         </div>
+        <div class="search_container">
+            <form action="">
+                <select class="search_option" name="option">
+                    <option value="A" ${ph.sc.option == 'A' || ph.sc.option == '' ? "selected" : ""}>제목+내용</option>
+                    <option value="T" ${ph.sc.option == 'T' ? "selected" : ""}>제목만</option>
+                    <option value="W" ${ph.sc.option == 'W' ? "selected" : ""}>작성자</option>
+                </select>
+
+                <input type="text" name="keyword" id="keyword" class="search_input" value="${ph.sc.keyword}" placeholder="검색어를 입력해주세요" />
+                <input type="submit" class="search_button" value="검색" onclick="location.href='<c:url value="/contact/list"/>'"/>
+            </form>
+        </div>
     </div>
 </main>
 <%@include file="footer.jsp"%>
@@ -109,6 +126,7 @@
 
     if(msg=="DELETE_OK") alert("게시물이 성공적으로 삭제되었습니다.");
     if(msg=="DELETE_ERR") alert("게시물 삭제에 실패했습니다. 다시 시도해주세요.");
+
 </script>
 </body>
 </html>
