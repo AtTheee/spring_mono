@@ -48,8 +48,38 @@
 - 프로젝트는 제목, 설명을 포함한 다수의 이미지 파일 첨부가 가능하다.
 - 마이페이지로 가면 본인 글만 확인할 수 있으며(내 게시글 확인), 회원 정보 수정과 탈퇴가 가능하다.
 
+## 요구사항 분석
+1. 회원가입 페이지 
+- 모든 입력은 필수이며 입력 칸마다 유효성 검사 실시
+- 약관 동의에 동의 해야 회원가입 버튼 활성화
+- ID는 중복확인 검사 실시
+- email 인증 필수
+
+2. 로그인 페이지
+ - DB에 존재하는 ID인지 검사
+ - ID와 PW가 일치하는지 검사
+
+3. 회원정보 수정
+- 비밀번호 확인 후 수정 페이지 진입
+- 비밀번호가 일치해야 수정 완료
+
+4. Contact 게시글
+- 로그인이 필요한 서비스
+- 모든 입력 필수
+- 본인 글만 삭제, 수정 가능
+
+5. 댓글 검사
+- 공백 검사
+- 본인 글만 수정, 삭제 가능
+
+6. Project 게시판
+- 관리자만 글쓰기 버튼 활성화
+- 제목, 이미지 파일 필수 입력
+
+
 ## 실제 서비스 화면
 ![mono1](https://github.com/AtTheee/spring_mono/assets/139583539/1ccf8e12-9971-477e-a982-8393ce354a4c)
 ![mono2](https://github.com/AtTheee/spring_mono/assets/139583539/1b419b8f-b240-46dc-bd38-215968903648)
 ![mono3](https://github.com/AtTheee/spring_mono/assets/139583539/0b937af4-dbf8-47d4-bb12-460fe66719bc)
 ![mono4](https://github.com/AtTheee/spring_mono/assets/139583539/1b93ee5f-4e2c-4f4e-a689-01ea00879453)
+![image](https://github.com/AtTheee/spring_mono/assets/139583539/82e0a177-20ed-462f-bd87-a484296376cf)
