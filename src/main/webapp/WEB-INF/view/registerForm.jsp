@@ -239,7 +239,7 @@
      $("#phone").on('input', function (){
        let phone = $(this).val();
 
-       if (!/^[0-9]/.test(phone)) {
+       if (!/^\d+$/.test(phone)) {
          $('#ph_msg').text("숫자만 입력해주세요.")
          validationStatus.phone = false;
        } else{
@@ -256,6 +256,7 @@
         }
         else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
           $("#em_msg").text("유효한 이메일을 입력해주세요.")
+          return;
         }
         else{
           $("#em_msg").text("");
