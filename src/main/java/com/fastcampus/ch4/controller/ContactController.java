@@ -1,11 +1,14 @@
 package com.fastcampus.ch4.controller;
 
+import com.fastcampus.ch4.annotation.CheckLogin;
 import com.fastcampus.ch4.domain.ContactDto;
 import com.fastcampus.ch4.domain.PageHandler;
 import com.fastcampus.ch4.domain.SearchCondition;
 import com.fastcampus.ch4.domain.User;
 import com.fastcampus.ch4.service.ContactService;
 import com.fastcampus.ch4.service.MemberService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,12 +27,22 @@ import java.util.List;
 @Controller
 @RequestMapping("/contact")
 public class ContactController {
-
+//
     @Autowired
     ContactService contactService;
 
     @Autowired
     MemberService memberService;
+
+//    private final ContactService contactService;
+//    private final MemberService memberService;
+//
+//    public ContactController(ContactService contactService, MemberService memberService){
+//        this.contactService = contactService;
+//        this.memberService = memberService;
+//    }
+
+    private static final Logger logger = LoggerFactory.getLogger(ContactController.class);
 
     @GetMapping("/list")
     public String list(Model model, SearchCondition sc) throws Exception {
@@ -58,10 +71,15 @@ public class ContactController {
     }
 
     @GetMapping("/write")
+    @CheckLogin
     public String write(HttpServletRequest request ,Model model){
-        if(!loginCehck(request)){
-            return "redirect:/login/login?toURL=" + request.getRequestURL();
-        }
+
+        logger.debug("write call method()");
+
+//        if(!loginCehck(request)){
+//            return "redirect:/login/login?toURL=" + request.getRequestURL();
+//        }
+
         model.addAttribute("mode","new");
 
         return "contactView";
