@@ -12,8 +12,13 @@ import java.util.Map;
 
 @Repository
 public class BoardDaoImpl implements BoardDao {
-    @Autowired
-    private SqlSession session; // DB 연결 관리
+//    @Autowired
+//    private SqlSession session; // DB 연결 관리
+
+    private final SqlSession session;
+    public BoardDaoImpl(SqlSession session){
+        this.session = session;
+    }
 
     private String namespace = "com.fastcampus.ch4.dao.BoardMapper."; // SQL문을 식별하기 위함
     @Override

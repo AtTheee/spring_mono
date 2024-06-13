@@ -28,19 +28,19 @@ import java.util.List;
 @RequestMapping("/contact")
 public class ContactController {
 //
-    @Autowired
-    ContactService contactService;
-
-    @Autowired
-    MemberService memberService;
-
-//    private final ContactService contactService;
-//    private final MemberService memberService;
+//    @Autowired
+//    ContactService contactService;
 //
-//    public ContactController(ContactService contactService, MemberService memberService){
-//        this.contactService = contactService;
-//        this.memberService = memberService;
-//    }
+//    @Autowired
+//    MemberService memberService;
+
+    private final ContactService contactService;
+    private final MemberService memberService;
+
+    public ContactController(ContactService contactService, MemberService memberService){
+        this.contactService = contactService;
+        this.memberService = memberService;
+    }
 
     private static final Logger logger = LoggerFactory.getLogger(ContactController.class);
 

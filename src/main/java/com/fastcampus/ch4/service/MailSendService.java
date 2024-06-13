@@ -12,8 +12,13 @@ import java.util.UUID;
 
 @Component
 public class MailSendService {
-    @Autowired
-    private JavaMailSenderImpl mailSender;
+//    @Autowired
+//    private JavaMailSenderImpl mailSender;
+
+    private final JavaMailSenderImpl mailSender;
+    public MailSendService(JavaMailSenderImpl mailSender){
+        this.mailSender = mailSender;
+    }
 
     public int makeRandomNumber(){
         //난수 생성 (인증번호)

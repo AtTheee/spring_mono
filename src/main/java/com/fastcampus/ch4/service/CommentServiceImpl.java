@@ -10,9 +10,9 @@ import java.util.*;
 @Service
 public class CommentServiceImpl implements CommentService {
 //    @Autowired // 필드 주입으로 하면 @Repository를 까먹고 안붙여도 티가 안남
-    ContactDao contactDao;
+    private final ContactDao contactDao;
 //    @Autowired
-    CommentDao commentDao;
+    private final CommentDao commentDao;
 
 //    @Autowired // 하지만 생성자 주입으로 해놓으면 없다는걸 컴파일 할 때 알 수 있음
     public CommentServiceImpl(CommentDao commentDao, ContactDao contactDao) {

@@ -30,14 +30,23 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @RequestMapping("/login")
 public class LoginController {
 
-    @Autowired
-    MemberService memberService;
+//    @Autowired
+//    MemberService memberService;
+//
+//    @Autowired
+//    MailSendService mailSendService;
+//
+//    @Autowired
+//    ContactService contactService;
 
-    @Autowired
-    MailSendService mailSendService;
-
-    @Autowired
-    ContactService contactService;
+    private final MemberService memberService;
+    private final MailSendService mailSendService;
+    private final ContactService contactService;
+    public LoginController(MemberService memberService, MailSendService mailSendService, ContactService contactService){
+        this.memberService = memberService;
+        this.mailSendService = mailSendService;
+        this.contactService = contactService;
+    }
 
     @GetMapping("/login")
     public String loginForm() {

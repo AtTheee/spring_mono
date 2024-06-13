@@ -11,8 +11,13 @@ import java.util.List;
 @Service
 public class ContactServiceImpl implements ContactService {
 
-    @Autowired
-    ContactDao contactDao;
+//    @Autowired
+//    ContactDao contactDao;
+
+    private final ContactDao contactDao;
+    public ContactServiceImpl(ContactDao contactDao){
+        this.contactDao = contactDao;
+    }
 
     @Override
     public int write(ContactDto contactDto) throws Exception {

@@ -13,8 +13,13 @@ import java.util.List;
 @Service
 public class GalleryServiceImpl implements GalleryService {
 
-    @Autowired
-    GalleryDao galleryDao;
+//    @Autowired
+//    GalleryDao galleryDao;
+
+    private final GalleryDao galleryDao;
+    public GalleryServiceImpl(GalleryDao galleryDao){
+        this.galleryDao = galleryDao;
+    }
 
     @Override
     public int write(GalleryDto galleryDto) throws Exception {

@@ -18,8 +18,14 @@ import java.util.List;
 //@ResponseBody
 @RestController
 public class CommentController {
-    @Autowired
-    CommentService commentService;
+//    @Autowired
+//    CommentService commentService;
+
+    private final CommentService commentService;
+
+    public CommentController(CommentService commentService){
+        this.commentService = commentService;
+    }
 
     // 댓글을 수정하는 메서드
 //    @ResponseBody

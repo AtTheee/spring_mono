@@ -14,8 +14,13 @@ import java.util.Map;
 @Repository
 public class ContactDaoImpl implements ContactDao {
 
-    @Autowired
-    private SqlSession session;
+//    @Autowired
+//    private SqlSession session;
+
+    private final SqlSession session;
+    public ContactDaoImpl(SqlSession session){
+        this.session = session;
+    }
 
     private String namespace = "com.fastcampus.ch4.dao.ContactMapper."; // SQL문을 식별하기 위함
 

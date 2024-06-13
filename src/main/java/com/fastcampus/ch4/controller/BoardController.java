@@ -15,8 +15,14 @@ import java.util.*;
 @Controller
 @RequestMapping("/board")
 public class BoardController {
-    @Autowired
-    BoardService boardService;
+//    @Autowired
+//    BoardService boardService;
+
+    private final BoardService boardService;
+
+    public BoardController(BoardService boardService){
+        this.boardService = boardService;
+    }
 
     @PostMapping("/modify")
     public String modify(BoardDto boardDto, SearchCondition sc, RedirectAttributes rattr, Model m, HttpSession session) {

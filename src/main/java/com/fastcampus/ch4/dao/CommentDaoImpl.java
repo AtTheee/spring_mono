@@ -9,8 +9,12 @@ import java.util.*;
 
 @Repository
 public class CommentDaoImpl implements CommentDao {
-    @Autowired
-    private SqlSession session;
+//    @Autowired
+//    private SqlSession session;
+    private final SqlSession session;
+    public CommentDaoImpl(SqlSession session){
+        this.session = session;
+    }
     private static String namespace = "com.fastcampus.ch4.dao.CommentMapper.";
 
     @Override

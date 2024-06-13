@@ -23,11 +23,18 @@ import java.util.stream.Collectors;
 @RequestMapping("/gallery")
 public class GalleryController {
 
-    @Autowired
-    GalleryService galleryService;
+//    @Autowired
+//    GalleryService galleryService;
+//
+//    @Autowired
+//    MemberService memberService;
 
-    @Autowired
-    MemberService memberService;
+    private final GalleryService galleryService;
+    private final MemberService memberService;
+    public GalleryController(GalleryService galleryService, MemberService memberService){
+        this.galleryService = galleryService;
+        this.memberService = memberService;
+    }
 
     private String rootPath = "/images";
 

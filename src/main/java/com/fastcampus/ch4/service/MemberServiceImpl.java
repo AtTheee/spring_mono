@@ -9,10 +9,17 @@ import org.springframework.stereotype.Service;
 @Service
 public class MemberServiceImpl implements MemberService {
 
-    @Autowired
-    UserDao userDao;
-    @Autowired
-    private BCryptPasswordEncoder passwordEncoder;
+//    @Autowired
+//    UserDao userDao;
+//    @Autowired
+//    private BCryptPasswordEncoder passwordEncoder;
+
+    private final UserDao userDao;
+    private final BCryptPasswordEncoder passwordEncoder;
+    public MemberServiceImpl(UserDao userDao, BCryptPasswordEncoder passwordEncoder){
+        this.userDao = userDao;
+        this.passwordEncoder = passwordEncoder;
+    }
 
     @Override
     public int login(String id, String pw) throws Exception {

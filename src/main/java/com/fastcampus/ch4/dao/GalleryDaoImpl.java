@@ -12,8 +12,13 @@ import java.util.List;
 @Repository
 public class GalleryDaoImpl implements GalleryDao {
 
-    @Autowired
-    private SqlSession session;
+//    @Autowired
+//    private SqlSession session;
+
+    private final SqlSession session;
+    public GalleryDaoImpl(SqlSession session){
+        this.session = session;
+    }
 
     private String namespace = "com.fastcampus.ch4.dao.GalleryMapper."; // SQL문을 식별하기 위함
 
